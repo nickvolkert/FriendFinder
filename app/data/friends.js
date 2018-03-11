@@ -1,0 +1,154 @@
+var friendsArray = [
+{
+  "name":"Robby",
+  "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+  "scores":[
+      5,
+      1,
+      4,
+      4,
+      5,
+      1,
+      2,
+      5,
+      4,
+      1
+    ]
+},{
+  "name":"Barry",
+  "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+  "scores":[
+      4,
+      3,
+      2,
+      1,
+      2,
+      5,
+      3,
+      2,
+      1,
+      2
+    ]
+},{
+  "name":"Sherri",
+  "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+  "scores":[
+      3,
+      4,
+      5,
+      4,
+      3,
+      4,
+      4,
+      5,
+      3,
+      2
+    ]
+},{
+  "name":"Larry",
+  "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+  "scores":[
+      3,
+      4,
+      3,
+      5,
+      5,
+      3,
+      2,
+      5,
+      4,
+      4
+    ]
+},{
+  "name":"Teri",
+  "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+  "scores":[
+      5,
+      5,
+      2,
+      4,
+      5,
+      2,
+      2,
+      4,
+      3,
+      1
+    ]
+},{
+  "name":"Robby",
+  "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+  "scores":[
+      5,
+      1,
+      4,
+      4,
+      5,
+      1,
+      2,
+      5,
+      4,
+      1
+    ]
+},{
+  "name":"Gigi",
+  "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+  "scores":[
+      4,
+      3,
+      2,
+      1,
+      2,
+      5,
+      3,
+      2,
+      1,
+      2
+    ]
+},{
+  "name":"Georgie",
+  "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+  "scores":[
+      3,
+      4,
+      5,
+      4,
+      3,
+      4,
+      4,
+      5,
+      3,
+      2
+    ]
+},{
+  "name":"Harry",
+  "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+  "scores":[
+      3,
+      4,
+      3,
+      5,
+      5,
+      3,
+      2,
+      5,
+      4,
+      4
+    ]
+},{
+  "name":"Barry",
+  "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+  "scores":[
+      5,
+      5,
+      2,
+      4,
+      5,
+      2,
+      2,
+      4,
+      3,
+      1
+    ]
+}
+];
+module.exports = friendsArray;
