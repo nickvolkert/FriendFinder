@@ -10,7 +10,7 @@ var PORT = 3000;
 // Sets up the Express app to handle data parsing
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-app.use('/public/css', express.static(path.join(__dirname + '/public/css')));
+app.use(express.static("app/public"));
 
 require('./app/routing/api-routes.js')(app);
 require('./app/routing/html-routes.js')(app);
