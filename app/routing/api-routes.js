@@ -7,5 +7,13 @@ module.exports = function(app){
     for(var i = 0; i < friendsArray.length; i++){
       console.log(friendsArray[i].name);
     }
+    function friendModalBuild(){
+      for(var i = 0; i < friendsArray.length; i++){
+        console.log(friendsArray[i].name);
+      }
+      $("#friendPicture").css('background-image', 'url("' + friendsArray[0].photo + '")');
+      $("#friendText h3").html(friendsArray[0].name);
+    }
+    friendModalBuild();
   });
 }
