@@ -37,3 +37,42 @@ hr{
 #division{
   margin:40px 0;
 }
+#intCurtain{
+  display:none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 888; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(4,31,38); /* Fallback color */
+  background-color: rgba(4,31,38,0.3); /* Black w/ opacity */
+}
+#modalHouse{
+  width: 400px;
+  height: 300px;
+  border-radius: 10px;
+  background-color: #FFF;
+  margin: 150px auto 0 auto;
+  padding: 30px;
+}
+#friendPicture{
+  width: 140px;
+  height: 140px;
+  margin: 0 auto 20px auto;
+  background-color: #777;
+}
+#friendText{
+
+}
+h2{
+  text-align: center;
+}
+#modalHouse p{
+  text-align: center;
+}
+a#close{
+  color:#777;
+  text-align: center;
+}

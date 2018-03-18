@@ -4,6 +4,8 @@ module.exports = function(app){
     res.json(friendsArray);
   });
   app.post('/api/friends', function(req, res){
-    //need to loop through and log all of the friends data and push to user if they are a match
+    for(var i = 0; i < friendsArray.length; i++){
+      console.log(friendsArray[i].name);
+    }
   });
 }
