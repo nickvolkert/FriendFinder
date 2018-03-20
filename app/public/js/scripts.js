@@ -35,5 +35,19 @@ $(document).on("click", "#intCurtain", function (e) {
 });
 
 $("#findFriend").on("click", function(){
-  myLocationCurtain();
+  var name = $('#name');
+  var photo = $('#photo');
+  var q1 = $('#q1');
+
+  $.post("/api/friends", function(){
+    {
+      "name":name,
+      "photo":photo,
+      "scores":[q1]
+    }
+  })
+  .then(
+    // myLocationCurtain();
+  )
+
 })
