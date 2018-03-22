@@ -10,7 +10,7 @@ module.exports = function(app){
       photo: '',
       friendDiff: 1000
     }
-    console.log(req.body);
+    console.log("req.body: " + JSON.stringify(req.body));
 
     var userData = req.body;
     var userScores = userData.scores;
@@ -19,14 +19,17 @@ module.exports = function(app){
 
     for(var i = 0; i < friendsArray.length; i++){
         console.log(friendsArray[i].name);
-        totalDiff += Math.abs(parseInt(userScores[i]) - parseInt(friendsArray.scores[i]));
-        if (totalDiff <= bestFriend.friendDif){
+        totalDiff += Math.abs(parseInt(userScores[i]) - parseInt(friendsArray[i].scores[i]));
+        console.log("totalDiff: " + totalDiff);
+        console.log("bestFriend.friendDiff: " + bestFriend.friendDiff);
+        if (totalDiff <= bestFriend.friendDiff){
           bestFriend.name = friendsArray[i].name;
           bestFriend.photo = friendsArray[i].photo;
-          bestFriend.friendDiff = friendsArray[i].totalDif;
+          bestFriend.friendDiff = friendsArray[i].totalDiff;
+          console.log("friendsArray[i]: " + friendsArray[i]);
         }
       }
       friendsArray.push(userData);
-      res.JSON(bestFriend);
+      res.json(bestFriend);
   });
 }

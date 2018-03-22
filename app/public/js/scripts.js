@@ -1,23 +1,3 @@
-
-// {
-//   "name": name,
-//   "photo": photo,
-//   "scores": [q1, q2, q3, q4, q5, q6, q7, q8, q9, q10];
-//   console.log("score tracker is running");
-// }
-
-// <div id="intCurtain">
-//   <div id="modalHouse">
-//     <div id="friendPicture"></div>
-//     <div id="friendText">
-//       <h2>You have a new friend!</h2>
-//       <h3></h3>
-//       <p>May the emptyness of your black hearts envelop the world in darkness</p>
-//       <a href="#">Close</a>
-//     </div>
-//   </div>
-// </div>
-
 function friendReveal() {
           $("#intCurtain").show();
           //$("#friendPicture").html();
@@ -67,11 +47,11 @@ $("#findFriend").on("click", function(){
     ]
   };
   // Send the PUT request.
-  $.ajax("/api/friends/", {
-    type: "PUT",
+  $.ajax("/api/friends", {
+    type: "POST",
     data: friendData
   }).then(
-    function() {
+    function(data) {
       console.log("darkness gathers", friendData);
     }
   );
