@@ -15,17 +15,17 @@ module.exports = function(app){
     var userData = req.body;
     var userScores = userData.scores;
     console.log(userScores);
-    var totalDiff = 0;
+    var totalDifference = 0;
 
     for(var i = 0; i < friendsArray.length; i++){
         console.log(friendsArray[i].name);
-        totalDiff += Math.abs(parseInt(userScores[i]) - parseInt(friendsArray[i].scores[i]));
-        console.log("totalDiff: " + totalDiff);
-        console.log("bestFriend.friendDiff: " + bestFriend.friendDiff);
-        if (totalDiff <= bestFriend.friendDiff){
+        totalDifference += Math.abs(parseInt(userScores[i]) - parseInt(friendsArray[i].scores[i]));
+        console.log("totalDifference: " + totalDifference);
+        //console.log("bestFriend.friendDifference: " + bestFriend.friendDifference);
+        if (totalDifference <= bestFriend.friendDifference){
           bestFriend.name = friendsArray[i].name;
           bestFriend.photo = friendsArray[i].photo;
-          bestFriend.friendDiff = friendsArray[i].totalDiff;
+          bestFriend.friendDiff = friendsArray[i].totalDifference;
           console.log("friendsArray[i]: " + friendsArray[i]);
         }
       }
