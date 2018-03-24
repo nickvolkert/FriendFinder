@@ -57,6 +57,7 @@ $("#findFriend").on("click", function(){
   }).then(
     function(data) {
       console.log("darkness gathers", friendData);
+      console.log("data output:" + JSON.stringify(data));
     }
   );
   friendReveal();
