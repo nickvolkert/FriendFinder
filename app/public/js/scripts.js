@@ -10,18 +10,17 @@ function friendReveal() {
           }).then(function(response) {
 
             // Saving the image_original_url property
-            var imageUrl = response[0].image;
-            var friendH3 = response[0].name;
+
             console.log("image result: " + imageUrl);
             console.log("name result: " + friendH3);
             // Creating and storing an image tag
             $("#intCurtain").show();
             //$("#friendPicture").css('background-image', 'url("' + imageUrl + '")');
-            $("#friendPicture").css('background-image', 'url("/img/teri.png")');
+
             //$("#friendPicture").html('<img src="../' + imageUrl + "/>");
             //var friendImage = $("<img class='userImage'>");
             //friendImage.attr("src", imageUrl);
-            $("#friendText h3").html(friendH3);
+
      });
    }
 
@@ -58,7 +57,12 @@ $("#findFriend").on("click", function(){
     function(data) {
       console.log("darkness gathers", friendData);
       console.log("data output:" + JSON.stringify(data));
+      var imageUrl = data.image;
+      var friendH3 = data.name;
+      $("#friendText h3").html(friendH3);
+      $("#friendPicture").css('background-image', 'url(' + data.photo + ')');
+      $("#intCurtain").show();
     }
   );
-  friendReveal();
+
 });

@@ -8,28 +8,30 @@ module.exports = function(app){
     var bestFriend = {
       name: '',
       photo: '',
-      friendDiff: 1000
+      friendDifference: 1000
     }
     console.log("req.body: " + JSON.stringify(req.body));
 
     var userData = req.body;
     var userScores = userData.scores;
     console.log(userScores);
-    var totalDifference = 0;
+
 
     for(var i = 0; i < friendsArray.length; i++){
+        var totalDifference = 0;
         console.log(friendsArray[i].name);
-        totalDifference += Math.abs(parseInt(userScores[i]) - parseInt(friendsArray[i].scores[i]));
-        console.log("totalDifference: " + totalDifference);
-        //console.log("bestFriend.friendDifference: " + bestFriend.friendDifference);
-        if (totalDifference <= bestFriend.friendDifference){
-          bestFriend.name = friendsArray[i].name;
-          bestFriend.photo = friendsArray[i].photo;
-          bestFriend.friendDiff = friendsArray[i].totalDifference;
-          console.log("friendsArray[i]: " + friendsArray[i]);
+        for(var j = 0; j < userScores.length; j++){
+          totalDifference += Math.abs(parseInt(userScores[j]) - parseInt(friendsArray[i].scores[j]));
+          console.log("totalDifference: " + totalDifference);
+          if (totalDifference <= bestFriend.friendDifference){
+            bestFriend.name = friendsArray[i].name;
+            bestFriend.photo = friendsArray[i].photo;
+            bestFriend.friendDifference = friendsArray[i].totalDifference;
+            console.log("friendsArray[i]: " + friendsArray[i]);
+          }
         }
-      }
-      friendsArray.push(userData);
-      res.json(bestFriend);
+        friendsArray.push(userData);
+        res.json(bestFriend);
+    }
   });
 }
